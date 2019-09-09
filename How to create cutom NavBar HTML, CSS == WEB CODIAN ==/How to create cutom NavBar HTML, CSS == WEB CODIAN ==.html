@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+			overflow: hidden;
+			height: 70vh;
+			background: url(img.jpg) 50% 50% no-repeat;
+			background-size: cover;
+		}
+
+		nav{
+			width: 43.75rem;
+			border-radius: 3.125rem;
+			background: rgba(255, 0, 0, 0.726);
+			margin: 21.875rem 31.25rem;
+			padding: 1.25rem 0 1.25rem 3.125rem;
+		}
+
+		a{
+			position: relative;
+			display: inline-block;
+			color: #fff;
+			text-decoration: none;
+			letter-spacing: 1px;
+			font-size: 1.35rem;
+			padding: 0.635rem 1.875rem;
+			transition: all ease 0.3s;
+		}
+
+		a::before{
+			top: 0;
+			transform: translateY(-0.625rem);
+		}
+
+		a::after{
+			bottom: 0;
+			transform: translateY(0.625rem);
+		}
+
+		a::before,
+		a::after{
+			left: 0;
+			height: 2px;
+			width: 100%;
+			background: #fff;
+			opacity: 0;
+			content: '';
+			position: absolute;
+			transform: translateY(-0.625rem);
+			transition: opacity 0.3s, transform 0.3s;
+		}
+
+		a:hover::before,
+		a:hover::after{
+			opacity: 1;
+			transform: translateY(0rem);
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<a href="#">Home</a>
+		<a href="#">Blog</a>
+		<a href="#">Services</a>
+		<a href="#">About</a>
+		<a href="#">Contact</a>
+	</nav>
+</body>
+</html>
